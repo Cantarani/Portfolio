@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Define um documento HTML -->
+<html lang="pt-br" class="">
+  <!-- Root element ou parent / define o idioma do conteúdo -->
+  <head>
+    <!-- Configura o que não é visível para quem acessa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8" />
+    <!-- Define a decodificação do arquivo -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <!-- Configuração para que o arquivo seja compatível com navegadores mais antigos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configuração para que a parte visível do site seja da adaptada para a largura da tela do dispositivo que está acessando e sem zoom -->
+    <title>Document</title>
+    <!-- Título da página na Web -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Link de relação com a página "style.css" -->
+  </head>
+  <body>
+    <!-- Inserindo uma "caixa" -->
+    <div id="conteiner">
+      <div id="profile">
+        <img src="./assets/avatar.png" alt="Foto de Matheus Cantarani sorrindo, com óculos e blusa cinza e com o mar ao fundo">
+        <p>@canttarani</p>
+      </div>
+      <div id="switch" onclick="toggleMode()">
+        <button> 
+          
+        </button>
+        <span>
+
+        </span>
+      </div>
+      <ul>
+        <li>
+          <a href="#" target="_blank">Lista item 1</a>
+        </li>
+        <li>
+          <a href="#" target="_blank">Lista item 2</a>
+        </li>
+        <li>
+          <a href="#" target="_blank">Lista item 3</a>
+        </li>
+      </ul>
+      <div id="social-links">
+        <a href="https://github.com/Cantarani" target="_blank"> 
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://instagram.com/canttarani" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a> 
+        <a href="https://twitter.com/macantarani" target="_blank">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="https://linkedin.com/in/matheus-cantarani" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      </div>
+      <footer>
+        Rodapé
+      </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js">
+
+    </script>
+  </body>
+</html>
+

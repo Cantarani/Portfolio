@@ -12,9 +12,7 @@
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-url: url(./assets/moon-stars.svg)
-
-
+  --switch-url: url(./assets/moon-stars.svg);
 }
 
 .light {
@@ -24,12 +22,8 @@
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-url: url(./assets/sun.svg)
-
-
-
+  --switch-url: url(./assets/sun.svg);
 }
-
 
 body {
   /* Posso definir dessa forma, um por um:
@@ -42,18 +36,19 @@ body {
   /* Também posso definir tudo de uma vez, conhecido com shorthand: 
     background: <image> <repeat> <posiiton>/<size> */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
 /* seletor de id */
 #conteiner {
-  width: 360px;
-  margin: auto;
-  margin-top: 56px;
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0px;
   padding: 0 24px;
 }
 
@@ -71,6 +66,13 @@ body * {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
+}
+
+#project {
+  text-align: center;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 24px;
 }
 
 #switch {
@@ -92,6 +94,8 @@ body * {
   right: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-out 0.4s forwards;
 }
 
 #switch button:hover {
@@ -100,8 +104,7 @@ body * {
 }
 
 .light #switch button {
-  left: 0;
-  right: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -170,7 +173,6 @@ ul li a:hover {
 
 #social-links a:hover {
   background: var(--highlight-color);
-  
 }
 
 footer {
@@ -179,5 +181,33 @@ footer {
   font-size: 14px;
 }
 
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
 
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
 
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
